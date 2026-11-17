@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://ddg6hku5ukjo5"]
+
+[ext_resource type="Texture2D" uid="uid://ddpme04tub4n3" path="res://Vibrant Burger Kitchen Feast.png" id="1_06t4h"]
+[ext_resource type="Script" uid="uid://dx6eh2sqgafwv" path="res://main_menu.gd" id="1_7vrkn"]
+
+[node name="MainMenu" type="Control" unique_id=216184955]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7vrkn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1447527939]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_06t4h")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=338531499]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainMenuBox" type="VBoxContainer" parent="CenterContainer" unique_id=1997381153]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="CenterContainer/MainMenuBox" unique_id=493273949]
+layout_mode = 2
+theme_override_font_sizes/font_size = 54
+text = "محاكي كشك البرجر"
+
+[node name="PlayButton" type="Button" parent="CenterContainer/MainMenuBox" unique_id=1901847431]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "ابدأ اللعب"
+
+[node name="ExitButton" type="Button" parent="CenterContainer/MainMenuBox" unique_id=281503498]
+layout_mode = 2
+theme_override_font_sizes/font_size = 29
+text = "خروج"
+
+[node name="ShopButton" type="Button" parent="CenterContainer/MainMenuBox" unique_id=1061923512]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "المتجر والترقيات"
+
+[node name="ShopPanel" type="PanelContainer" parent="CenterContainer" unique_id=1724501767]
+visible = false
+custom_minimum_size = Vector2(500, 420)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/ShopPanel" unique_id=735204351]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/ShopPanel/VBoxContainer" unique_id=130232243]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "متجر ترقيات الكشك"
+horizontal_alignment = 1
+
+[node name="ShopMoneyLabel" type="Label" parent="CenterContainer/ShopPanel/VBoxContainer" unique_id=2087956765]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "رصيدك الحالي:0$"
+horizontal_alignment = 1
+
+[node name="BuyGrillSpeedBtn" type="Button" parent="CenterContainer/ShopPanel/VBoxContainer" unique_id=1102439268]
+layout_mode = 2
+text = "شواية تربو +50$"
+
+[node name="BuyDoubleProfitBtn" type="Button" parent="CenterContainer/ShopPanel/VBoxContainer" unique_id=1782456465]
+layout_mode = 2
+text = "زيادة الارباح(+15 لكل طلب)75$"
+
+[node name="CloseShopBtn" type="Button" parent="CenterContainer/ShopPanel/VBoxContainer" unique_id=1782711587]
+layout_mode = 2
+text = "الرجوع للقائمة الرئيسية"
